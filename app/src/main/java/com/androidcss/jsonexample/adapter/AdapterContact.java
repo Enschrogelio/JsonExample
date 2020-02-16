@@ -75,16 +75,14 @@ public class AdapterContact extends RecyclerView.Adapter<RecyclerView.ViewHolder
                 Toast.makeText(context, " Just cliked item at position " + current.fishName, Toast.LENGTH_LONG).show();
 
 
-                Intent activityTwo = new Intent(context, DetailsActivity.class);
-                activityTwo.putExtra("key", current.fishName);
-                //activityTwo.putExtra("key1", current.fishImage);
                 Intent intent = new Intent(context, DetailsActivity.class);
+                intent.putExtra("key", current.fishName);
                 String imageUrl = url + current.fishImage;
-                intent.putExtra("image1",data.get(position).getImage_url());
+                intent.putExtra("image1",imageUrl);
 
                // intent.putExtra("IMAGE_URL", imageUrl);
 
-                context.startActivity(activityTwo);
+                context.startActivity(intent);
 
 
 

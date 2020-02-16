@@ -27,7 +27,6 @@ public class DetailsActivity extends AppCompatActivity {
         TextView tv = (TextView)findViewById(R.id.image_description);
         tv.setText(s);
 
-
         //Intent intent= getIntent();
         String a = getIntent().getStringExtra("image1");
         ImageView imageView = (ImageView) findViewById(R.id.image);
